@@ -451,6 +451,7 @@ in
 	  signal-desktop-bin
 	  codeberg-cli
 	  ly
+	  nil
   ])
 
   ++

@@ -130,6 +130,7 @@
 				vim.lsp.enable("astro")
 				vim.lsp.enable("tailwindcss")
 				vim.lsp.enable("ols")
+				vim.lsp.enable("nil_ls")
 			'';
 		}
 
@@ -222,6 +223,7 @@
 			  p.rust
 			  p.astro
 			  p.gleam
+			  p.nix
 		]))
 
 		];
