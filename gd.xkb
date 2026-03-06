@@ -1,0 +1,8 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "us(basic)"
+    name[Group1] = "My Custom Layout";
+	key <AB01>	{[	 Up,	 Up		]};
+	key <AB02>	{[	 Up,	 Up		]};
+	key <AB03>	{[	 Up,	 Up		]};
+};
