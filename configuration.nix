@@ -88,69 +88,13 @@ in
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  services.keyd = {
-	  enable = true;
-	  keyboards = {
-		  default = {
-			  ids = ["*"];
-			  settings = {
-				  main = {
-					  capslock = "toggle(gd)";
-				  };
-				  gd = {
-					  z = "up";
-					  x = "up";
-					  c = "up";
-					  semicolon = "up";
-					  q = "up";
-					  j = "up";
-				  };
-			  };
-		  };
-	  };
-  };
-
-  # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm = {
-  #  enable = true;
-  #  # extraPackages = with pkgs; [
-  #  #  sddm-astronaut
-  #  # ];
-  #
-  #  # theme = "sddm-astronaut-theme";
-  #  # settings = {
-  #  #  Theme = {
-  #  #   Current = "sddm-astronaut-theme";
-  #  #  };
-  #  # };
-  # };
-
   services.displayManager.ly.enable = true;
 
   # services.displayManager.sddm.theme = "Astronaut";
   services.desktopManager.plasma6.enable = true;
 
-  services.xserver.xkb.extraLayouts.gd = {
-	  description = "Geometry Dash Layout for the sayodevice";
-	  languages = [ "eng" ];
-	  symbolsFile = ./gd.xkb; # Path to your layout file
-  };
-
-  services.xserver = {
-	  xkb.layout = "gd,us";
-	  xkbVariant = ",dvorak";
-	  xkbOptions = "grp:win_space_toggle";
-  };
-
-
-  # Configure keymap in X11
-  # services.xserver.xkb = {
-  #   layout = "us";
-  #   variant = "dvorak";
-  # };
-
   # Configure console keymap
-  console.keyMap = "dvorak";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
