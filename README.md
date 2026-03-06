@@ -5,3 +5,6 @@ This is my personal (very bad) configuration that I use, and will continue to up
 ## Features
 - Home manager to manage pretty much all dotfiles (working on getting all of them)
 - Flakes
+
+## TODO
+- [ ] Migrate everything into modules
