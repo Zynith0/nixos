@@ -7,4 +7,5 @@ This is my personal (very bad) configuration that I use, and will continue to up
 - Flakes
 
 ## TODO
+- [ ] Get all configurations managed by home manager
 - [ ] Migrate everything into modules
