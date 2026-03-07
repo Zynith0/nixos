@@ -396,6 +396,7 @@ in
 	  codeberg-cli
 	  ly
 	  nil
+	  fastfetch
   ])
 
   ++
