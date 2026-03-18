@@ -200,6 +200,7 @@ in
   # $ nix search wget
   environment.systemPackages = 
   	(with pkgs; [
+	  neovim
 	  vim
 	  hyprland
 	  hyprshot
@@ -212,6 +213,7 @@ in
 	  quickshell
 	  nerd-fonts.jetbrains-mono
 	  nerd-fonts._3270
+	  nerd-fonts.roboto-mono
 	  reaper
 	  pavucontrol
 	  fish
@@ -312,6 +314,9 @@ in
 	  zls
 	  zig
 	  sdrpp
+	  chirp
+	  catppuccin-kde
+	  foot
   ])
 
   ++
