@@ -60,6 +60,16 @@ in
 	  };
   };
 
+  services.i2pd = {
+  	enable = true;
+	address = "127.0.0.1";
+	proto = {
+		http.enable = true;
+		socksProxy.enable = true;
+		httpProxy.enable = true;
+	};
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -157,7 +167,7 @@ in
     isNormalUser = true;
     description = "Zynith";
     extraGroups = [ "networkmanager" "wheel" "input" "wireshark" "docker" "dialout" "uucp" ];
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
     packages = with pkgs; [
     ];
   };
@@ -167,7 +177,6 @@ in
 	openFirewall = true;
   };
 
-  # Install firefox.
   programs.firefox.enable = true;
 
   programs.wireshark.enable = true;
@@ -178,6 +187,8 @@ in
 
   # Enable hyprland.
   programs.hyprland.enable = true;
+  # programs.i3.enable = true;
+  programs.sway.enable = true;
 
   # Enable niri.
   programs.niri.enable = true;
@@ -317,6 +328,16 @@ in
 	  chirp
 	  catppuccin-kde
 	  foot
+	  nushell
+	  starship
+	  sway
+	  i3
+	  feh
+	  dmenu
+	  flameshot
+	  rofi
+	  i2pd
+	  librewolf
   ])
 
   ++

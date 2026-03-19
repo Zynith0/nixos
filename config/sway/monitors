@@ -1,0 +1,6 @@
+# Wallpaper
+output * bg ~/Pictures/caelus.png fill
+
+# My monitors (change to work for yours):
+output DP-1 res 1920x1080@143.981Hz pos 1920,0
+output HDMI-A-1 pos 0,0

@@ -29,6 +29,33 @@
 		};
 	};
 
+	programs = {
+		nushell = {
+			enable = true;
+			extraConfig = ''
+				$env.config.show_banner = false
+			'';
+			shellAliases = {
+				vim = "nvim";
+			};
+		};
+		starship = {
+			enable = true;
+			settings = {
+				add_newline = true;
+				# character = {
+				# 	success_symbol = "[➜](bold green)";
+				# 	error_symbol = "[➜](bold red)";
+				# };
+				format = "$all$nix_shell$nodejs$lua$golang$rust$php$git_branch$git_commit$git_state$git_status\n$username$hostname$directory";
+				character = {
+					success_symbol = "[](bold green) ";
+					error_symbol = "[✗](bold red) ";
+				};
+			};
+		};
+	};
+
 	programs.fzf = {
 		enable = true;
 		enableZshIntegration = true;
@@ -258,6 +285,7 @@
 	  ".config/nvim".source = ./config/nvim;
 	  # ".config/nvim".force = true;
 	  ".config/nvim".recursive = true;
+	  ".config/sway".source = ./config/sway;
 	};
 
 	home.sessionVariables = {
