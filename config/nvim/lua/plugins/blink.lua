@@ -2,7 +2,10 @@ return {
 	"saghen/blink.cmp",
 	config = function()
 		require('blink.cmp').setup({
-			keymap = { preset = 'enter' },
+			keymap = {
+				preset = 'default',
+				["<C-CR>"] = { "select_and_accept" },
+			},
 
 			appearance = {
 				nerd_font_variant = 'mono'
