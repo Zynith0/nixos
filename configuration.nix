@@ -298,7 +298,6 @@
 	  sqlite
 	  zed-editor
 	  vicinae
-	  opencode
 	  ollama-vulkan
 	  unzip
 	  jq
