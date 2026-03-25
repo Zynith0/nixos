@@ -249,7 +249,6 @@
 	  nwg-look
 	  brave
 	  nemo
-	  sddm-astronaut
 	  zsh
 	  oh-my-zsh
 	  bibata-cursors
