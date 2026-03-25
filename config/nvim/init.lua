@@ -1,4 +1,6 @@
 require("config.options")
 require("config.remap")
 require("config.lazy")
-require("caelus.init").colorscheme()
+-- require("caelus.init").colorscheme()
+-- require("monochrome.init").colorscheme()
+vim.cmd("colorscheme kanagawa")

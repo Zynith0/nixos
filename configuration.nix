@@ -28,6 +28,45 @@
 	  libxkbcommon
   ];
 
+  services.home-assistant = {
+	  enable = true;
+	  extraComponents = [
+		  "analytics"
+		  "google_translate"
+		  "met"
+		  "radio_browser"
+		  "shopping_list"
+		  "isal"
+          "tplink"
+          # "mqtt"
+          # "zigbee"
+	  ];
+	  config = {
+		  default_config = {};
+	  };
+  };
+
+  # services.mosquitto = {
+  #     enable = true;
+  #     listeners = [{
+  #         address = "192.168.0.67";
+  #         port = 1883;
+  #         users.iotdevice = {
+  #             acl = [
+  #                 "read IoT/device/action"
+  #                 "write IoT/device/observations"
+  #                 "write IoT/device/LW"
+  #             ];
+  #             password = "2548";
+  #         };
+  #     }];
+  # };
+
+  # services.govee2mqtt = {
+  #  enable = true;
+  #  environmentFile = "/var/lib/govee2mqtt/.env";
+  # };
+
   virtualisation.docker = {
 	  enable = true;
 
@@ -36,19 +75,19 @@
 	  };
   };
 
-  virtualisation.oci-containers = {
-	  backend = "podman";
-	  containers.homeassistant = {
-		  volumes = [ "home-assistant:/config" ];
-		  environment.TZ = "Europe/Berlin";
-		  image = "ghcr.io/home-assistant/home-assistant:stable";
-		  extraOptions = [ 
-			  "--network=host"
-# Pass devices into the container, so Home Assistant can discover and make use of them
-			  # "--device=/dev/ttyACM0:/dev/ttyACM0"
-		  ];
-	  };
-  };
+#   virtualisation.oci-containers = {
+# 	  backend = "podman";
+# 	  containers.homeassistant = {
+# 		  volumes = [ "home-assistant:/config" ];
+# 		  environment.TZ = "Europe/Berlin";
+# 		  image = "ghcr.io/home-assistant/home-assistant:stable";
+# 		  extraOptions = [ 
+# 			  "--network=host"
+# # Pass devices into the container, so Home Assistant can discover and make use of them
+# 			  # "--device=/dev/ttyACM0:/dev/ttyACM0"
+# 		  ];
+# 	  };
+#   };
 
   services.i2pd = {
   	enable = true;
@@ -219,7 +258,6 @@
 	  everforest-gtk-theme
 	  fzf
 	  harper
-	  mosquitto
 	  slimevr
 	  blueberry
 	  nodejs_24
@@ -288,6 +326,7 @@
 	  deadbeef
 	  fzf
 	  zip
+      mosquitto
   ])
 
   ++
